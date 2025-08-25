@@ -1,15 +1,36 @@
 
-<div class="row">
-    <div class="col-md-12">
-        <h2>Products</h2>
-        <div class="product-list">
-            <div class="product-item" *ngFor="let product of products">
-                <img [src]="product.image" alt="{{ product.name }}" />
-                <h3>{{ product.name }}</h3>
-                <p>{{ product.description }}</p>
-                <!-- <p>Price: {{ product.price | currency }}</p>
-                <button (click)="addToCart(product)">Add to Cart</button> -->
-            </div>
+
+<div> 
+    <h2 class="text-center my-4">Products</h2>
+    <h4 class="text-center my-4">Total Products: {{ totelOfProducts }}</h4>
+    <h4 class="text-center my-4">the number of categories: {{ selectedCategory }}</h4>
+    
+</div>
+
+<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" [(ngModel)]="selectedCategory"  >
+  <option value="0" selected>All Categories</option>
+  <option *ngFor="let category of categorys" [value]="category.id">{{ category.name }}</option>
+</select>
+<div class="container">
+  <div class="row">   
+    @for (product of products; track  $index  )  {
+      <div class="col-md-4 mb-3" *ngIf="selectedCategory == 0 || product.category_id == selectedCategory">
+        <div class="card h-100">
+          <img [src]="product.imgUrl" class="card-img-top" alt="{{ product.name }}">
+          <div class="card-body">
+            <h5 class="card-title" [ngClass]="{ 'text-danger': $even }">{{ product.name }}</h5>
+            <h5 class="card-title" [ngStyle]="{ 'color': $odd ? 'red' : 'blue' }">{{ product.price }}</h5>
+            <h5 class="card-title">{{ $even}}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
+            <p class="card-text"><strong>Category ID:</strong> {{ product.category_id }}</p>
+          </div>
         </div>
+      </div>
+
+
+ 
+    
+    }
     </div>
 </div>
