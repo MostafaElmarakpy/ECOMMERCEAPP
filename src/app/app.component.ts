@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from './components/footer/footer.component';
@@ -19,4 +19,10 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'ECOMMERCEAPP';
+  
+  getDataFromC:string="";
+
+ recevedDataFromFooter:string="";
+
+
 }
