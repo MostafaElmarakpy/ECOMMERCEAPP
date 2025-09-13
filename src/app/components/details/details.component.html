@@ -1,0 +1,28 @@
+
+<!-- Details component form product -->
+  <div class="container">   
+    <h2 class="text-center my-4">Product Details</h2>
+      <!-- <div *ngIf="product; else noProduct"> -->
+          <div class="card mb-8">
+              <div class="row g-0">
+                  <div class="col-md-6">
+                      <!-- <img [src]="product?.imgUrl" class="img-fluid rounded-start" alt="{{ product?.name }}"> -->
+                       <img src="https://picsum.photos/600/300" class="img-fluid rounded-start" alt="{{ product?.name }}">
+                  </div>
+                  <div class="col-md-6">
+                      <div class="card-body">
+                          <h5 class="card-title">{{ product?.name }}</h5>
+                          <p class="card-text"><strong>Price:</strong> ${{ product?.price }}</p>
+                          <p class="card-text"><strong>Category ID:</strong> {{ product?.category_id }}</p>
+                          <p class="card-text"><strong>Description:</strong> {{ product?.description }}</p>
+                          <p class="card-text"><strong>Quantity:</strong> {{ product?.quantity }}</p>
+                          <p class="card-text"><strong>Product ID:</strong> {{ product?.id }}</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <ng-template #noProduct>
+          <p>No product found.</p>
+      </ng-template>
+  <!-- </div> -->
