@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #e7e7e7;
+    margin-top: 40px;
+}
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+footer .container .copyright {
+    color: #6c757d;
+    font-size: 14px;
+}
+footer .container .copyright a {
+    color: #007bff;
+    text-decoration: none;
+}
+footer .container .copyright a:hover {
+    text-decoration: underline;
+}
+footer .container .copyright a:hover, footer .container .copyright a:focus {
+    text-decoration: underline;
+}
+footer .container .copyright a:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
+footer .container .copyright a:active {
+    color: #0056b3;
+}
+footer .container .copyright a:active, footer .container .copyright a:focus {
+    color: #0056b3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
+a:active {
+    color: #0056b3;
+}
+
+a:active, a:focus {
+    color: #0056b3;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer .container {
+        padding: 0 10px;
+    }
+    footer .container .copyright {
+        font-size: 12px;
+    }
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    footer {
+        background-color: #333;
+        color: #fff;
+    }
+    footer .container .copyright {
+        color: #999;
+    }
+    footer .container .copyright a {
+        color: #fff;
+    }
+}
+    footer .container .copyright a:hover {
+        color: #ccc;
+    }
+    footer .container .copyright a:focus {
+        outline: 2px solid #ccc;
+    }
+    footer .container .copyright a:active {
+        color: #ccc;
+    }
+    footer .container .copyright a:active, footer .container .copyright a:focus {
+        color: #ccc;
+    }
+
+
+@media (prefers-color-scheme: light) {
+    footer {
+        background-color: #f8f9fa;
+        color: #000;
+    }
+    footer .container .copyright {
+        color: #6c757d;
+    }
+    footer .container .copyright a {
+        color: #007bff;
+    }
+    footer .container .copyright a:hover {
+        color: #0056b3;
+    }
+    footer .container .copyright a:focus {
+        outline: 2px solid #0056b3;
+    }
+    footer .container .copyright a:active {
+        color: #0056b3;
+    }
+}   
+    
