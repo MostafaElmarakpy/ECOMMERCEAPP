@@ -1,0 +1,10 @@
+
+<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" [(ngModel)]="selectedCategory"  >
+  <option value="0" selected>All Categories</option>
+  <!-- <option *ngFor="let category of categorys" [value]="category.id">{{ category.name }}</option> -->
+   @for (category of categorys; track $index) {
+    <option [value]="category.id">{{ category.name }}</option>
+   }
+</select>
+
+<app-products [recevedCatFromOrder]="selectedCategory"></app-products>
